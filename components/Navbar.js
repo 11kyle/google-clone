@@ -1,6 +1,6 @@
 import { NavLink } from "./navLink";
 
-export const NavBar = () => {
+export const NavBar = ({}) => {
   return (
     <nav className="flex justify-between py-3 mt-3 fixed top-0 w-screen underline-offset-1">
       <div>

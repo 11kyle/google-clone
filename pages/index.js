@@ -1,13 +1,19 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { SearchBar } from '../components/searchBar';
 import styles from '../styles/Home.module.css';
 import googleLogo from '../public/googlelogo_color_272x92dp.png';
 import { NavLink } from '../components/navLink';
 import { Footer } from '../components/Footer';
 import { NavBar } from '../components/Navbar';
+import { useState } from 'react';
 
 export default function Home() {
+  const [searchType, setSearchType] = useState("text");
+
+  const handleClick = (e) => {
+    
+  }
+
   return (
     <div className="h-screen overflow-hidden text-sm">
       <Head>

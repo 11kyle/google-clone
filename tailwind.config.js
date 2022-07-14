@@ -14,9 +14,6 @@ module.exports = {
       width: {
         '582': '582px',
       },
-      boxShadow: {
-        'all-sides': '0 1px 6px rgb(32 33 36 0.25',
-      }
     },
   },
   plugins: [],
