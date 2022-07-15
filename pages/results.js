@@ -3,6 +3,7 @@ import { ResultsMenu } from '../components/resultsMenu';
 import Image from 'next/image';
 import googleLogo from '../public/googleLogo_color_92x30dp.png';
 import { Footer } from '../components/Footer';
+import { ResultPagination } from '../components/resultPagination';
 
 export default function Results() {
   return (
@@ -33,8 +34,8 @@ export default function Results() {
         </nav>
         <ResultsMenu />
         <Result />
+        <ResultPagination />
       </div>
-      <Footer />
     </>
   );
 }
