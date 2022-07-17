@@ -8,10 +8,13 @@ import { NavBar } from '../components/Navbar';
 import { useState } from 'react';
 
 export default function Home() {
-  const [searchType, setSearchType] = useState("text");
+  const [value, setValue] = useState("");
 
-  const handleClick = (e) => {
-    
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  }
+  const handleSubmit = (e) => {
+    setValue("");
   }
 
   return (
@@ -41,7 +44,7 @@ export default function Home() {
           </span>
           <input
             className="w-582 h-11 my-8 text-base bg-white placeholder:font-italitc border border-slate-300 rounded-full py-2 pl-10 pr-4 focus:outline-none hover:shadow-[0_1px_6px_0_rgba(0,0,0,0.28)]"
-            type="text" 
+            type="text" value={value} onChange={handleChange}
           />
             <span className="absolute inset-y-0 right-0 flex items-center pr-3">
               <svg className="h-5 w-5" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -53,8 +56,8 @@ export default function Home() {
             </span>
         </label>  
         <div>
-          <button className="bg-custom-slate px-3 py-2 mx-2 rounded-md border border-custom-slate hover:border hover:border-slate-300 hover:shadow-[0_1px_1px_0_rgba(0,0,0,0.10)]">Google Search</button>
-          <button className="bg-custom-slate px-3 py-2 mx-2 rounded-md border border-custom-slate hover:border hover:border-slate-300 hover:shadow-[0_1px_1px_0_rgba(0,0,0,0.10)]">I'm Feeling Lucky</button>
+          <button onClick={handleSubmit} className="bg-custom-slate px-3 py-2 mx-2 rounded-md border border-custom-slate hover:border hover:border-slate-300 hover:shadow-[0_1px_1px_0_rgba(0,0,0,0.10)]">Google Search</button>
+          <button onClick={handleSubmit} className="bg-custom-slate px-3 py-2 mx-2 rounded-md border border-custom-slate hover:border hover:border-slate-300 hover:shadow-[0_1px_1px_0_rgba(0,0,0,0.10)]">I'm Feeling Lucky</button>
         </div>
       </div>
 
